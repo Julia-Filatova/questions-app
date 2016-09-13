@@ -1,0 +1,24 @@
+@(fields: List[models.entities.Field])
+
+@main("Fields") {
+
+<input type="submit" value="+ Add field">
+<div>
+    <table border="1">
+        <tr>
+            <td>Label</td><td>Type</td><td>Required</td>
+            <td>Is active</td><td></td><td></td>
+        </tr>
+        @for(field <- fields) {
+
+        <tr>
+            <td>@field.getLabel</td><td>@field.getTypeOfField</td>
+            <td>@field.isRequired</td><td>@field.isActive</td>
+            <td><a href="#">edit</a> </td><td><a href="#">delete</a></td>
+        </tr>
+        }
+
+    </table>
+
+</div>
+}

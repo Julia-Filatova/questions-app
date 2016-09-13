@@ -5,21 +5,24 @@
 
     <persistence-unit name="local" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <non-jta-data-source>LocalDS</non-jta-data-source>
 
-        <class>models.entities.Person</class>
+        <class>models.entities.User</class>
+        <class>models.entities.Field</class>
 
         <properties>
             <!--Hibernate properties-->
             <property name="hibernate.show_sql" value="false"/>
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL82Dialect"/>
 
             <property name="hibernate.connection.CharSet" value="utf8"/>
             <property name="hibernate.connection.characterEncoding" value="utf8"/>
             <property name="hibernate.connection.useUnicode" value="true"/>
+            <property name="hibernate.connection.url" value="jdbc:postgresql://localhost/test"/>
 
+            <property name="hibernate.connection.username" value="postgres"/>
+            <property name="hibernate.connection.password" value="root"/>
         </properties>
     </persistence-unit>
 

@@ -20,7 +20,9 @@ libraryDependencies ++= Seq(
   cache,
   javaWs,
   "org.assertj" % "assertj-core" % "3.1.0" % "test",
-  "org.apache.commons" % "commons-lang3" % "3.4"
+  "org.apache.commons" % "commons-lang3" % "3.4",
+   "postgresql" % "postgresql" % "9.1-901-1.jdbc4"
+
 )
 
 // Play provides two styles of routers, one expects its actions to be injected, the
@@ -50,7 +52,6 @@ dockerExposedPorts in Docker := Seq(9000, 9443)
 //dockerUpdateLatest := true
 
 // run this with: docker run -p 9000:9000 <name>:<version>
-
 
 
 fork in run := true

@@ -7,7 +7,7 @@ import java.io.Serializable;
  * Created by Yuliia_Filatova on 9/7/2016.
  */
 @Entity
-@Table(name="fields")
+@Table(name="fields2")
 public class Field implements Serializable {
 
     @Id
@@ -15,16 +15,16 @@ public class Field implements Serializable {
     private Long fieldId;
 
     @Column
-    private String name;
+    private String label;
 
     @Column
-    private FieldType type;
+    private FieldType typeOfField;
 
     @Column
     private boolean isActive;
 
     @Column
-    private boolean required;
+    private boolean requiredField;
 
     public Long getFieldId() {
         return fieldId;
@@ -34,20 +34,20 @@ public class Field implements Serializable {
         this.fieldId = fieldId;
     }
 
-    public String getName() {
-        return name;
+    public String getLabel() {
+        return label;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setLabel(String name) {
+        this.label = name;
     }
 
-    public FieldType getType() {
-        return type;
+    public FieldType getTypeOfField() {
+        return typeOfField;
     }
 
-    public void setType(FieldType type) {
-        this.type = type;
+    public void setTypeOfField(FieldType type) {
+        this.typeOfField = type;
     }
 
     public boolean isActive() {
@@ -59,10 +59,10 @@ public class Field implements Serializable {
     }
 
     public boolean isRequired() {
-        return required;
+        return requiredField;
     }
 
     public void setRequired(boolean required) {
-        this.required = required;
+        this.requiredField = required;
     }
 }

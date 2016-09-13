@@ -1,5 +1,9 @@
 package models.entities;
 
+import jdk.nashorn.internal.objects.annotations.Getter;
+import jdk.nashorn.internal.objects.annotations.Setter;
+import org.dom4j.tree.AbstractEntity;
+
 import javax.persistence.*;
 
 /**
@@ -7,7 +11,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name="users")
-public class User {
+public class User extends AbstractEntity{
 
     @Id
     @GeneratedValue

@@ -12,6 +12,6 @@ public class Global extends GlobalSettings {
 
   @Override public void onStart(final Application app) {
     super.onStart(app);
-   // PlayUtils.logConfig();
+  // PlayUtils.logConfig();
   }
 }
